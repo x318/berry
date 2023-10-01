@@ -8,4 +8,7 @@ jobs:
         with:
           node-version: 20
       - run: cat /proc/version_signature
-      - run: node ./testcase.js
+      - run: |
+          while (true); do
+            node ./testcase.js
+          done
