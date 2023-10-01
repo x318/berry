@@ -7,6 +7,9 @@ concurrency:
   # Cancel intermediate builds, but only if it is a pull request build.
   cancel-in-progress: ${{startsWith(github.ref, 'refs/pull/')}}
 
+env:
+  UV_USE_IO_URING: 0
+
 name: 'Integration'
 jobs:
   chore:
